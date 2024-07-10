@@ -6,9 +6,24 @@
 go mod tidy
 go mod vendor
 
-make images IMG_REGISTRY=ghcr.io/kluster-manager IMAGE_TAG=v0.6.0
+export IMAGE_TAG=v0.6.0
 
-docker push ghcr.io/kluster-manager/managed-serviceaccount:v0.6.0
+make images IMG_REGISTRY=ghcr.io/kluster-manager
+
+docker push ghcr.io/kluster-manager/managed-serviceaccount:${IMAGE_TAG}
+```
+
+## cluster-proxy
+
+```
+go mod tidy
+go mod vendor
+
+export IMAGE_TAG=v0.5.0
+
+make images IMAGE_REGISTRY_NAME=ghcr.io/kluster-manager
+
+docker push ghcr.io/kluster-manager/cluster-proxy:${IMAGE_TAG}
 ```
 
 ## cluster-gateway
