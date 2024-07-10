@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## clusteradm
+
+```
+export IMAGE_TAG=v0.9.0
+
+make build-bin
+make image
+make push
+```
+
+
 ## managed-serviceaccount
 
 ```
