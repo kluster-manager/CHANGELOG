@@ -6,7 +6,9 @@
 go mod tidy
 go mod vendor
 
-make images IMG_REGISTRY=ghcr.io/kluster-management IMAGE_TAG=v0.6.0
+make images IMG_REGISTRY=ghcr.io/kluster-manager IMAGE_TAG=v0.6.0
+
+docker push ghcr.io/kluster-manager/managed-serviceaccount:v0.6.0
 ```
 
 ## cluster-gateway
