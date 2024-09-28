@@ -1,5 +1,24 @@
 # CHANGELOG
 
+## ocm
+
+IMAGE_REGISTRY?=quay.io/open-cluster-management
+IMAGE_TAG?=latest
+
+```
+$ go install github.com/openshift/imagebuilder/cmd/imagebuilder@latest
+
+export IMAGE_TAG=v0.14.0
+
+make images IMAGE_REGISTRY=ghcr.io/kluster-manager
+
+docker push ghcr.io/kluster-manager/addon-manager:${IMAGE_TAG}
+docker push ghcr.io/kluster-manager/registration-operator:${IMAGE_TAG}
+docker push ghcr.io/kluster-manager/placement:${IMAGE_TAG}
+docker push ghcr.io/kluster-manager/work:${IMAGE_TAG}
+docker push ghcr.io/kluster-manager/registration:${IMAGE_TAG}
+```
+
 ## clusteradm
 
 ```
