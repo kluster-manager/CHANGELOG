@@ -59,7 +59,7 @@ docker push ghcr.io/kluster-manager/cluster-proxy:${IMAGE_TAG}
 ## cluster-gateway
 
 ```
-export IMG_TAG=v1.9.0
+export IMG_TAG=v1.9.1
 
 make gateway ocm-addon-manager
 docker push ghcr.io/kluster-manager/cluster-gateway-manager:${IMG_TAG}
