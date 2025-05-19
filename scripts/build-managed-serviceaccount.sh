@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export TAG=${TAG:-v0.8.0}
+export TAG=${TAG:-v0.8.1}
 export IMG_REGISTRY=ghcr.io/kluster-manager
 
 docker buildx create \
